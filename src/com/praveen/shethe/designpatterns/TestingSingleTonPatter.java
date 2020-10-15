@@ -9,6 +9,10 @@ public class TestingSingleTonPatter {
         SingleTonDesignPatter singleTonDesignPatter = SingleTonDesignPatter.getSingleTonDesignPatter();
         SingleTonDesignPatter singleTonDesignPatter1 = SingleTonDesignPatter.getSingleTonDesignPatter();
         System.out.println(singleTonDesignPatter == singleTonDesignPatter1);
+
+        TestingSingleTonPatter  testingSingleTonPatter = new TestingSingleTonPatter();
+        TestingSingleTonPatter  testingSingleTonPatter1 = new TestingSingleTonPatter();
+        System.out.println(testingSingleTonPatter == testingSingleTonPatter1);
     }
 
 }
