@@ -8,9 +8,9 @@ public class BubbleSort {
     public static void main(String[] args) {
         BubbleSort ob = new BubbleSort();
         int arr[] = {64, 34, 25, 12, 22, 11, 90};
-        ob.bubbleSort(arr);
+        int[] a = ob.bubbleSort(arr);
         System.out.println("Sorted array");
-        ob.printArray(arr);
+        ob.printArray(a);
     }
 
     public void printArray(int arr[])
@@ -21,17 +21,17 @@ public class BubbleSort {
         System.out.println();
     }
 
-    public static void bubbleSort(int a[]){
+    public static int[] bubbleSort(int[] a){
         for (int i=0;i<a.length-1;i++) {
             for (int j=0;j<a.length-1;j++){
                 if (a[i]>a[j]){
                     int temp = a[j];
                     a[j] = a[i];
-                    a[j++]=temp;
-                    System.out.print(","+temp);
+                    a[j]=temp;
+                    System.out.println("A ============ "+a[j]+"================="+temp);
                 }
             }
         }
-        System.out.println();
+    return a;
     }
 }
