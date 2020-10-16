@@ -14,4 +14,10 @@ public class MainValid {
 //        System.out.println("Hello");
 //    }
 
+    public static void main(String[] args) {
+        Class aClass = MainValid.class;
+        System.out.println(aClass.getClassLoader());
+        System.out.println(String.class.getClassLoader());
+    }
+
 }
