@@ -23,6 +23,18 @@ public class StringImmutablity {
         System.out.println(s1 == s2);
         System.out.println(s2 == s);
 
+        String concatation = "Praveenkumar";
+        String concatation1 = " Shethe";
+        String concateResult = concatation + concatation1;
+        System.out.println(concateResult);
+        System.out.println("-------------------------------------");
+        String concateResult1 = concatation.concat(concatation1);
+        System.out.println(concateResult1);
+        System.out.println("-------------------------------------");
+
+        System.out.println("Praveenkumar".substring(0,4)+ "i");
+        System.out.println(concatation.toUpperCase());
+        System.out.println(concatation.toLowerCase());
 
 
     }
