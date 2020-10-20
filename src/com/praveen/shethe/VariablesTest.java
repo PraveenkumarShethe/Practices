@@ -17,7 +17,7 @@ public class VariablesTest {
         final int z = 0;
     }
 
-    public void add(){
+   /* public void add(){
         x = 1;
         y = 2;
         z = 3;
@@ -30,7 +30,7 @@ public class VariablesTest {
         y = 2;
         z = 3;
 
-    }
+    }*/
 
 
 }

@@ -13,7 +13,7 @@ public class BubbleSort {
         ob.printArray(a);
     }
 
-    public void printArray(int arr[])
+    public static void printArray(int arr[])
     {
         int n = arr.length;
         for (int i=0; i<n; ++i)
@@ -28,10 +28,27 @@ public class BubbleSort {
                     int temp = a[j];
                     a[j] = a[i];
                     a[j]=temp;
-                    System.out.println("A ============ "+a[j]+"================="+temp);
+                    System.out.println(a[j]);
                 }
             }
         }
+        printArray(a);
     return a;
     }
+
+    public static int[] bubblesort(int a[]){
+
+        int result[] = {};
+
+        for (int i = 0 ; i < a.length-1 ; i++ ){
+            for (int j = 0 ; j < a.length-1 ; j++ ){
+                if (a[i]>a[j]){
+                    result[i] = a[i];
+                }
+            }
+        }
+
+        return result;
+    }
+
 }
