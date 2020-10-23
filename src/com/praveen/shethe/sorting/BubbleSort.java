@@ -4,51 +4,30 @@ package com.praveen.shethe.sorting;
  * Created by Praveenkumar on 10/14/2020.
  */
 public class BubbleSort {
-
     public static void main(String[] args) {
-        BubbleSort ob = new BubbleSort();
-        int arr[] = {64, 34, 25, 12, 22, 11, 90};
-        int[] a = ob.bubbleSort(arr);
-        System.out.println("Sorted array");
-        ob.printArray(a);
-    }
-
-    public static void printArray(int arr[])
-    {
-        int n = arr.length;
-        for (int i=0; i<n; ++i)
-            System.out.print(arr[i] + " ");
+        int[] a = {10, 9, 7, 101, 23, 44, 12, 78, 34, 23};
+        System.out.println(" Input Values ");
+        for(int i=0;i<10;i++)
+        {
+            System.out.print(a[i]+ " ,");
+        }
+        for(int i=0;i<10;i++)
+        {
+            for (int j=0;j<10;j++)
+            {
+                if(a[i]<a[j])
+                {
+                    int temp = a[i];
+                    a[i]=a[j];
+                    a[j] = temp;
+                }
+            }
+        }
         System.out.println();
-    }
-
-    public static int[] bubbleSort(int[] a){
-        for (int i=0;i<a.length-1;i++) {
-            for (int j=0;j<a.length-1;j++){
-                if (a[i]>a[j]){
-                    int temp = a[j];
-                    a[j] = a[i];
-                    a[j]=temp;
-                    System.out.println(a[j]);
-                }
-            }
+        System.out.println("Output Printing Sorted List ...");
+        for(int i=0;i<10;i++)
+        {
+            System.out.print(a[i]+ " ,");
         }
-        printArray(a);
-    return a;
     }
-
-    public static int[] bubblesort(int a[]){
-
-        int result[] = {};
-
-        for (int i = 0 ; i < a.length-1 ; i++ ){
-            for (int j = 0 ; j < a.length-1 ; j++ ){
-                if (a[i]>a[j]){
-                    result[i] = a[i];
-                }
-            }
-        }
-
-        return result;
-    }
-
 }

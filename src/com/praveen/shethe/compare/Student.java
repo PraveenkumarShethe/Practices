@@ -44,10 +44,20 @@ public class Student implements Comparable<Student> {
     @Override
     public int compareTo(Student student) {
         if (age == student.getAge())
-        return 0;
+            return 0;
         else if ( age > student.getAge())
             return 1;
         else
             return -1;
     }
+
+/*    @Override
+    public int compareTo(Student student) {
+        if (age == student.getAge() && rollNo == student.getRollNo())
+        return 0;
+        else if ( age > student.getAge() && rollNo > student.getRollNo())
+            return 1;
+        else
+            return -1;
+    }*/
 }
