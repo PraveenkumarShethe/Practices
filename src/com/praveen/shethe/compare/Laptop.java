@@ -11,6 +11,13 @@ public class Laptop implements Comparable<Laptop>{
 
     private int ramSize;
 
+    Laptop(String laptopName, int laptopPrice, int ramSize){
+        super();
+        this.laptopName = laptopName;
+        this.laptopPrice = laptopPrice;
+        this.ramSize = ramSize;
+    }
+
     public String getLaptopName() {
         return laptopName;
     }
@@ -37,15 +44,10 @@ public class Laptop implements Comparable<Laptop>{
 
     @Override
     public int compareTo(Laptop laptop) {
-
-        if (this.laptopName.compareTo(laptop.getLaptopName())){
+        if (this.getLaptopPrice() < laptop.getLaptopPrice()){
             return 1;
         }else{
-            return 0;
+            return -1;
         }
-
-
-
-
     }
 }
