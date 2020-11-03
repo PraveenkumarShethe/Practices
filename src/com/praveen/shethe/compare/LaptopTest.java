@@ -22,5 +22,4 @@ public class LaptopTest {
             System.out.println("Name : "+laptop.getLaptopName()+", Price: "+ laptop.getLaptopPrice()+", RAM: "+laptop.getRamSize());
         });
     }
-
 }
