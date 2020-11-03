@@ -11,8 +11,14 @@ public class InsertionSort {
         for (int i = 0; i < 10; i++) {
             System.out.print(a[i] + " ,");
         }
-//        sort1(a);
+        sort1(a);
+        System.out.println();
+        System.out.println("printing sorted elements ...");
+        for (int i = 0; i < 10; i++) {
+            System.out.print(a[i] + " ,");
+        }
         sort(a);
+        System.out.println();
         System.out.println("printing sorted elements ...");
         for (int i = 0; i < 10; i++) {
             System.out.print(a[i] + " ,");
@@ -20,7 +26,6 @@ public class InsertionSort {
     }
 
     public static void sort1(int[] a) {
-        System.out.println();
         for (int k = 1; k < 10; k++) {
             int temp = a[k];
             int j = k - 1;
