@@ -5,9 +5,10 @@ import java.util.HashSet;
 /**
  * Created by Praveenkumar on 11/4/2020.
  */
-public class LinkedList {
+public class LinkedListOwn {
 
     static Node head; // head of list
+
     /* Linked list Node*/
     static class Node {
         int data;
@@ -19,8 +20,7 @@ public class LinkedList {
         }
     }
 
-    static public void push(int new_data)
-    {
+    static public void push(int new_data) {
         /* 1 & 2: Allocate the Node &
                   Put in the data*/
         Node new_node = new Node(new_data);
@@ -32,38 +32,39 @@ public class LinkedList {
         head = new_node;
     }
 
-    static boolean detectLoop(Node h)
-    {
-        HashSet<Node> s = new HashSet<Node>();
+    static boolean detectLoop(Node h) {
+        HashSet<Node> nodeHashSet = new HashSet<Node>();
         while (h != null) {
             // If we have already has this node
             // in hashmap it means their is a cycle
             // (Because you we encountering the
             // node second time).
-            if (s.contains(h))
+            if (nodeHashSet.contains(h))
                 return true;
             // If we are seeing the node for
             // the first time, insert it in hash
-            s.add(h);
+            nodeHashSet.add(h);
             h = h.next;
         }
 
         return false;
     }
+}
+
+class LinkedListTesting{
 
     public static void main(String[] args) {
-        LinkedList llist = new LinkedList();
-
+        LinkedListOwn llist = new LinkedListOwn();
         llist.push(20);
         llist.push(4);
         llist.push(15);
         llist.push(10);
 
         /*Create loop for testing */
-        llist.head.next.next.next.next = llist.head;
+        llist.head.next.next.next = llist.head;
 
-        if (detectLoop(head))
-            System.out.println("Loop found");
+        if (llist.detectLoop(llist.head))
+            System.out.println("Linkedlist Loop found");
         else
             System.out.println("No Loop");
     }
