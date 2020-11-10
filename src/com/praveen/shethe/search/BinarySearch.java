@@ -1,4 +1,4 @@
-package search;
+package com.praveen.shethe.search;
 
 /**
  * Created by Praveenkumar on 10/31/2020.
