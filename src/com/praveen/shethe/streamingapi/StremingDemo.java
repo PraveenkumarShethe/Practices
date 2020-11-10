@@ -17,13 +17,11 @@ public class StremingDemo {
             System.out.print(seqnumber.get(i) + " ,");
         }
         System.out.println();
-
         // Demostration of map method
         List<Integer> squre = seqnumber.stream().map(x -> x * x).collect(Collectors.toList());
         for (int i = 0; i < squre.size(); i++) {
             System.out.print(squre.get(i) + " ,");
         }
-
         // create a list of String
         List<String> names =
                 Arrays.asList("Reflection", "Collection", "Stream");
