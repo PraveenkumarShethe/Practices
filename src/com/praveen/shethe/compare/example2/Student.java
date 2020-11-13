@@ -1,4 +1,4 @@
-package com.praveen.shethe.compare;
+package com.praveen.shethe.compare.example2;
 
 /**
  * Created by Praveenkumar on 10/22/2020.

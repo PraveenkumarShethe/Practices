@@ -1,4 +1,4 @@
-package com.praveen.shethe.compare;
+package com.praveen.shethe.compare.example2;
 
 import java.util.ArrayList;
 import java.util.Collections;
