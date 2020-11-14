@@ -22,5 +22,4 @@ public class ReversingString {
         ReversingString reversingString = new ReversingString();
         System.out.println(reversingString.revString("madam"));
     }
-
 }
