@@ -20,6 +20,6 @@ public class ReversingString {
 
     public static void main(String[] args) {
         ReversingString reversingString = new ReversingString();
-        System.out.println(reversingString.revString("madam"));
+        System.out.println(reversingString.revString("kakak1"));
     }
 }
