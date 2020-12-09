@@ -1,5 +1,6 @@
 package com.praveen.shethe.streamingapi;
 
+import java.util.Arrays;
 import java.util.IntSummaryStatistics;
 import java.util.stream.IntStream;
 
@@ -19,10 +20,13 @@ public class StreamApiExample {
 
         IntSummaryStatistics intSummaryStatistics = IntStream.of(a).summaryStatistics();
         System.out.println(intSummaryStatistics.getMin());
-        System.out.println(intSummaryStatistics.getMax());;
-        System.out.println(intSummaryStatistics.getSum());;
-        System.out.println(intSummaryStatistics.getCount());;
-        System.out.println(intSummaryStatistics.getAverage());;
+        System.out.println(intSummaryStatistics.getMax());
+        System.out.println(intSummaryStatistics.getSum());
+        System.out.println(intSummaryStatistics.getCount());
+        System.out.println(intSummaryStatistics.getAverage());
+        int[] copy = Arrays.copyOf(a, a.length);
+        Arrays.sort(copy);
+        System.out.println(IntStream.range(1,100).toArray());
     }
 
 }
