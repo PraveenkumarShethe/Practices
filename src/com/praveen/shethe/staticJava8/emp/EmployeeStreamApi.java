@@ -2,6 +2,7 @@ package com.praveen.shethe.staticJava8.emp;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -24,6 +25,12 @@ public class EmployeeStreamApi {
             Employee employee = empCopy.get(i);
             System.out.println(employee.getName());
         }
+
+        employeeList.stream()
+                .sorted(Comparator.comparingInt(Employee::getSalary).reversed())
+                .limit(3)   
+                .map(Employee::getName)
+                .forEach(System.out::println);
 
     }
 }
