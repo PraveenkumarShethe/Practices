@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Created by Praveenkumar on 12/10/2020.
@@ -28,9 +29,18 @@ public class EmployeeStreamApi {
 
         employeeList.stream()
                 .sorted(Comparator.comparingInt(Employee::getSalary).reversed())
-                .limit(3)   
+                .limit(3)
                 .map(Employee::getName)
                 .forEach(System.out::println);
+
+        employeeList.stream()
+                .sorted(Comparator.comparingInt(Employee::getSalary).reversed())
+                .filter(employee -> employee.getName()
+                .startsWith("S"))
+                .limit(3)
+                .collect(Collectors.toList());
+
+        employeeList.stream().collect(Collectors.toSet()).forEach(System.out::println);
 
     }
 }
