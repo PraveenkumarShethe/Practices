@@ -8,18 +8,17 @@ import java.util.HashSet;
 public class LinkedListLoop {
 
     static Node head;
-
-    static class Node{
+    
+    static class Node {
         int data;
         Node next;
-        Node(int d){
+
+        Node(int d) {
             data = d;
             next = null;
         }
     }
-
-    static public void push(int new_data)
-    {
+    static public void push(int new_data) {
         /* 1 & 2: Allocate the Node &
                   Put in the data*/
         Node new_node = new Node(new_data);
@@ -29,8 +28,7 @@ public class LinkedListLoop {
         head = new_node;
     }
 
-    static boolean detectLoop(Node h)
-    {
+    static boolean detectLoop(Node h) {
         HashSet<Node> s = new HashSet<Node>();
         while (h != null) {
             // If we have already has this node
@@ -46,21 +44,21 @@ public class LinkedListLoop {
         }
         return false;
     }
-    public static void main(String[] args)
-    {
+
+    public static void main(String[] args) {
         LinkedListLoop llist = new LinkedListLoop();
 
-        llist.push(20);
-        llist.push(4);
-        llist.push(15);
-        llist.push(10);
+        push(20);
+        push(4);
+        push(15);
+        push(10);
         /*Create loop for testing */
-        llist.head.next.next.next.next = llist.head;
-        Node head = new Node(1);
-        head.next = new Node(2);
-        head.next.next = new Node(3);
-        head.next.next.next = new Node(4);
-        head.next.next.next.next = new Node(5);
+        head.next.next.next.next = head;
+//        Node head = new Node(1);
+//        head.next = new Node(2);
+//        head.next.next = new Node(3);
+//        head.next.next.next = new Node(4);
+//        head.next.next.next.next = new Node(5);
 //        Create a loop for testing(5 is pointing to 3) /
 //        head.next.next.next.next.next = head.next.next;
 
@@ -75,4 +73,6 @@ public class LinkedListLoop {
         else
             System.out.println("No Loop");
     }
+
+
 }
