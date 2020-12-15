@@ -12,12 +12,13 @@ public class BubbleSort {
         }
         bubbleSorting(a);
         bubbleSortingImporvementOnforLoop(a);
+        bubbleSortingImporvementOnforLoopAndSwapingValues(a);
     }
 
     public static void bubbleSorting(int[] a) {
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a.length; j++) {
-                if (a[i] > a[j]) {
+                if (a[i] < a[j]) {
                     int temp = a[i];
                     a[i] = a[j];
                     a[j] = temp;
@@ -34,7 +35,7 @@ public class BubbleSort {
     public static void bubbleSortingImporvementOnforLoop(int[] a) {
 
         for (int i = 0, j =0 ; j < a.length && i < a.length; i++, j++) {
-                if (a[i] > a[j]) {
+                if (a[i] < a[j]) {
                     int temp = a[i];
                     a[i] = a[j];
                     a[j] = temp;
@@ -42,6 +43,22 @@ public class BubbleSort {
         }
         System.out.println();
         System.out.println("Output of bubbleSortingImporvementOnforLoop() Printing Sorted List ...");
+        for (int i = 0; i < 10; i++) {
+            System.out.print(a[i] + " ,");
+        }
+    }
+
+    public static void bubbleSortingImporvementOnforLoopAndSwapingValues(int[] a) {
+
+        for (int i = 0, j =0 ; j < a.length && i < a.length; i++, j++) {
+            if (a[i] < a[j]) {
+                a[i] = a[i] + a[j];
+                a[j] = a[i] - a[j];
+                a[i] = a[i] - a[j];
+            }
+        }
+        System.out.println();
+        System.out.println("Output of bubbleSortingImporvementOnforLoopAndSwapingValues() Printing Sorted List ...");
         for (int i = 0; i < 10; i++) {
             System.out.print(a[i] + " ,");
         }
