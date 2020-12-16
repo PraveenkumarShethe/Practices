@@ -1,5 +1,8 @@
 package com.praveen.shethe.search;
 
+
+import org.w3c.dom.Node;
+
 /**
  * Created by Praveenkumar on 10/31/2020.
  */
@@ -43,5 +46,19 @@ class BinarySearch {
             System.out.println("Element not present");
         else
             System.out.println("Element found at index " + result);
+    }
+
+    public Node search(Node root, int key)
+    {
+        // Base Cases: root is null or key is present at root
+        if (root==null || root.key==key)
+            return root;
+
+        // Key is greater than root's key
+        if (root.key < key)
+            return search(root.right, key);
+
+        // Key is smaller than root's key
+        return search(root.left, key);
     }
 }
