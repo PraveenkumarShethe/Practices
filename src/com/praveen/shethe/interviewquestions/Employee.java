@@ -11,6 +11,12 @@ public class Employee {
 
     private int age;
 
+    Employee(int empId, String name, int age){
+        this.empId = empId;
+        this.name = name;
+        this.age = age;
+    }
+
     public int getEmpId() {
         return empId;
     }
