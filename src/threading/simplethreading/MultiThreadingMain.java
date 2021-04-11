@@ -1,4 +1,4 @@
-package threading;
+package threading.simplethreading;
 
 /**
  * Created by Praveenkumar on 4/11/2021.
