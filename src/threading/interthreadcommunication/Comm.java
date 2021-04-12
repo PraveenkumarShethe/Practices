@@ -17,24 +17,23 @@ public class Comm {
                 e.printStackTrace();
             }
         }
-
+        System.out.println("setNum : " +  num);
         this.num=num;
-        setValue=true;
+        setValue = true;
         notify();
     }
 
     public synchronized void getNum(){
-        while (!setValue){
+        while (!setValue) {
             try {
                 wait();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println("getNum : " +  num);
-            setValue =false;
-            notify();
         }
-
+            System.out.println("getNum : " +  num);
+            setValue = false;
+            notify();
 
     }
 

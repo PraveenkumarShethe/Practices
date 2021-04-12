@@ -7,7 +7,8 @@ public class Producer implements Runnable{
 
     Comm comm;
 
-    Producer(Comm comm){
+    public Producer(Comm comm){
+        System.out.println("Producer constr ");
         this.comm = comm;
         Thread t = new Thread(this, "Producer");
         t.start();
@@ -15,11 +16,12 @@ public class Producer implements Runnable{
 
     @Override
     public void run() {
+        System.out.println("Producer : Inside run ");
         int count = 0 ;
-        comm.setNum(count++);
         while (true){
+            comm.setNum(count++);
             try {
-                Thread.sleep(1000);
+                Thread.sleep(500);
             }catch (Exception e){
                 e.printStackTrace();
             }

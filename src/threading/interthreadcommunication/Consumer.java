@@ -7,7 +7,8 @@ public class Consumer implements Runnable{
 
     Comm comm;
 
-    Consumer(Comm comm) {
+    public Consumer(Comm comm) {
+        System.out.println("Consumer constr ");
         this.comm = comm;
         Thread t = new Thread(this, "Consumer");
         t.start();
@@ -15,10 +16,11 @@ public class Consumer implements Runnable{
 
     @Override
     public void run() {
-        comm.getNum();
+        System.out.println("Consumer : Inside run ");
         while (true){
+            comm.getNum();
             try {
-                Thread.sleep(1000);
+                Thread.sleep(2000);
             }catch (Exception e){
                 e.printStackTrace();
             }
