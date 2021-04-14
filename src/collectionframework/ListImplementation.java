@@ -27,6 +27,7 @@ public class ListImplementation {
 //        list.add(19);
 //        list.add(20);
 //        list.add(19);
+        System.out.println(list.size());
         System.out.println("=============================================");
         list.forEach(o -> {
             System.out.println(o);
@@ -60,6 +61,8 @@ public class ListImplementation {
 //        list.add(19);
 //        list.add(20);
 //        list.add(19);
+        System.out.println(list.size());
+
         System.out.println("=============================================");
         list.forEach(o -> {
             System.out.println(o);
@@ -83,5 +86,6 @@ public class ListImplementation {
     public static void main(String[] args) {
         ListImplementation listImplementation = new ListImplementation();
         listImplementation.vectorimpl();
+        listImplementation.arrayListimp();
     }
 }
