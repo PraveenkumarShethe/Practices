@@ -2,6 +2,7 @@ package collectionframework;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 import java.util.Vector;
@@ -11,7 +12,7 @@ import java.util.Vector;
  */
 public class ListImplementation {
 
-    public void arrayListimp(){
+    public void arrayListimpl(){
 
         List list = new ArrayList();
         list.add(10);
@@ -83,9 +84,16 @@ public class ListImplementation {
 
     }
 
+    public void linkedListImpl(){
+
+        List list = new LinkedList();
+        
+
+    }
+
     public static void main(String[] args) {
         ListImplementation listImplementation = new ListImplementation();
         listImplementation.vectorimpl();
-        listImplementation.arrayListimp();
+        listImplementation.arrayListimpl();
     }
 }
