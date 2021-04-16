@@ -1,8 +1,7 @@
 package collectionframework;
 
-import java.math.BigDecimal;
+import java.util.Collections;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 
 /**
@@ -18,7 +17,15 @@ public class ContactApp {
         phoneBook.put("9887687678", "Manu");
         phoneBook.put("0998288282", "Kofa");
         phoneBook.put("8372676328", "Jannu");
-        System.out.println(phoneBook.get("8271612933").hashCode());
-
+        System.out.println("==================================================");
+        phoneBook.entrySet().forEach(phoneContact -> {
+            System.out.println(phoneContact.getKey()+"    :    "+ phoneContact.getValue());
+        });
+        phoneBook.remove("9827235577");
+        System.out.println("==================================================");
+        phoneBook.entrySet().forEach(phoneContact -> {
+            System.out.println(phoneContact.getKey()+"    :    "+ phoneContact.getValue());
+        });
+        System.out.println("==================================================");
     }
 }
