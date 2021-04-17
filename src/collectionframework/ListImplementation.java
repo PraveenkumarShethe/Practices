@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
+import java.util.Stack;
 import java.util.Vector;
 
 /**
@@ -89,6 +90,11 @@ public class ListImplementation {
         List list = new LinkedList();
         
 
+    }
+
+    public void stackImple(){
+        Stack stack = new Stack();
+        stack.add(1);
     }
 
     public static void main(String[] args) {
