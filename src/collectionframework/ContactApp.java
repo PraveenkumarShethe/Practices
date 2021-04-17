@@ -27,5 +27,10 @@ public class ContactApp {
             System.out.println(phoneContact.getKey()+"    :    "+ phoneContact.getValue());
         });
         System.out.println("==================================================");
+
+        Iterable iterable = (Iterable) phoneBook.entrySet().iterator();
+        while (iterable.iterator().hasNext()){
+            System.out.println(iterable.iterator().next());
+        }
     }
 }
