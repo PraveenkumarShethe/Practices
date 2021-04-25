@@ -1,4 +1,4 @@
-package threadpool;
+package threading.threadpool;
 
 /**
  * Created by Praveenkumar on 4/22/2021.
