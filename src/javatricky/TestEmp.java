@@ -2,6 +2,7 @@ package javatricky;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -22,9 +23,9 @@ public class TestEmp {
         list.add(new Employee("Zlamckla","Bcn"));
         Comparator<Employee> employeeComparator = Comparator.comparing(Employee::getName);
 
-        Iterable employeeIterable = (Iterable) list.iterator();
-        while (employeeIterable.iterator().hasNext()){
-            System.out.println(employeeIterable.iterator().next());
+        Iterator employeeIterable = list.iterator();
+        while (employeeIterable.hasNext()){
+            System.out.println(employeeIterable.next().getClass().getName());
         }
     }
 
