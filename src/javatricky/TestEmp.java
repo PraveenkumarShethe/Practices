@@ -11,7 +11,7 @@ import java.util.List;
 public class TestEmp {
 
     public static void main(String[] args) {
-        List list = new ArrayList();
+        List<Employee> list = new ArrayList();
         list.add(new Employee("Abc","Bcn"));
         list.add(new Employee("Alkn","Bcn"));
         list.add(new Employee("Aadcsd","Bcn"));
@@ -21,12 +21,9 @@ public class TestEmp {
         list.add(new Employee("claks","Bcn"));
         list.add(new Employee("Oaklal","Bcn"));
         list.add(new Employee("Zlamckla","Bcn"));
-        Comparator<Employee> employeeComparator = Comparator.comparing(Employee::getName);
-
-        Iterator employeeIterable = list.iterator();
-        while (employeeIterable.hasNext()){
-            System.out.println(employeeIterable.next().getClass().getName());
+        
+        for (Employee employee : list){
+            System.out.println(" Name: "+employee.getName() + " Last Name: " + employee.getLastName());
         }
     }
-
 }
