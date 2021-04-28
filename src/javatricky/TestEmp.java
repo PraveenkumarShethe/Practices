@@ -21,7 +21,7 @@ public class TestEmp {
         list.add(new Employee("claks","Bcn"));
         list.add(new Employee("Oaklal","Bcn"));
         list.add(new Employee("Zlamckla","Bcn"));
-        
+
         for (Employee employee : list){
             System.out.println(" Name: "+employee.getName() + " Last Name: " + employee.getLastName());
         }
