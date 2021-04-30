@@ -1,5 +1,7 @@
 package aprilexamples.sort;
 
+import java.util.Objects;
+
 /**
  * Created by Praveenkumar on 4/30/2021.
  */
@@ -55,5 +57,29 @@ public class Employee {
 
     public void setSalary(int salary) {
         this.salary = salary;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Employee)) return false;
+        Employee employee = (Employee) o;
+        return age == employee.age && salary == employee.salary && Objects.equals(name, employee.name) && Objects.equals(surName, employee.surName) && Objects.equals(middleName, employee.middleName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, surName, middleName, age, salary);
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", surName='" + surName + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", age=" + age +
+                ", salary=" + salary +
+                '}';
     }
 }

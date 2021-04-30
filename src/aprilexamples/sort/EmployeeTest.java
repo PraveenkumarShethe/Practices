@@ -30,11 +30,7 @@ public class EmployeeTest {
 
         Iterator<Employee> employeeIterator = list.iterator();
         while (employeeIterator.hasNext()){
-            System.out.println(" Name:  "+employeeIterator.next().getName() +
-                    " Middle name:  " + employeeIterator.next().getMiddleName() +
-                    " SurName:  " + employeeIterator.next().getSurName() +
-                    " Age:  "+ employeeIterator.next().getAge() +
-                    " Salary: " + employeeIterator.next().getSalary()) ;
+            System.out.println(employeeIterator.next());
         }
 
         System.out.println(list);
