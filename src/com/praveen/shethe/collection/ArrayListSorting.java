@@ -4,6 +4,7 @@ import com.praveen.shethe.collection.sortingexample.model.Student;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -27,7 +28,12 @@ public class ArrayListSorting {
         studentArrayList.add(new Student("Bhsha",12, 17));
         studentArrayList.add(new Student("Jasmin",13, 18));
         System.out.println(studentArrayList);
-        Collections.sort(studentArrayList);
+        Collections.sort(studentArrayList, new Comparator<Student>() {
+            @Override
+            public int compare(Student student1, Student student2) {
+                return student1.getName().compareTo(student2.getName());
+            }
+        });
         System.out.println(studentArrayList);
     }
 }
