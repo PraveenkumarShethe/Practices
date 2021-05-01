@@ -26,22 +26,18 @@ public class EmployeeTest {
         list.add(new Employee("Ethan", "Liam", "Samuel", 26, 84656));
         list.add(new Employee("Zaplipo", "Evelyn", "Joseph", 28, 82656));
 
-        Collections.sort(list, Comparator.comparing(Employee::getName).thenComparingInt(Employee::getAge).thenComparingInt(Employee::getSalary));
+        System.out.println("============================ Before sortinng ===================================");
 
         Iterator<Employee> employeeIterator = list.iterator();
         while (employeeIterator.hasNext()){
             System.out.println(employeeIterator.next());
         }
 
-        System.out.println(list);
-
-/*        Collections.sort(list, new Comparator<Employee>() {
-            @Override
-            public int compare(Employee employee1, Employee employee2) {
-                return employee1.getName().compareTo(employee2.getName());
-            }
-        });*/
-
+        Collections.sort(list, Comparator.comparing(Employee::getName).thenComparingInt(Employee::getAge).thenComparingInt(Employee::getSalary));
+        System.out.println("============================ After sortinng ===================================");
+        Iterator<Employee> employeeIterator1 = list.iterator();
+        while (employeeIterator1.hasNext()){
+            System.out.println(employeeIterator1.next());
+        }
     }
-
 }
