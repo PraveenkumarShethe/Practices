@@ -16,5 +16,4 @@ public class SingleTonLazyLoading {
         }
         return singleTonLazyLoading;
     }
-
 }
