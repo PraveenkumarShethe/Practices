@@ -9,8 +9,8 @@ public class SingleTon {
 
     private SingleTon(){}
 
-    public SingleTon getSingleTon(){
-        // Eagar Loading SingleTon class    
+    public static SingleTon getSingleTon(){
+        // Eagar Loading SingleTon class
         singleTonInstance =  new SingleTon();
         return singleTonInstance;
     }
