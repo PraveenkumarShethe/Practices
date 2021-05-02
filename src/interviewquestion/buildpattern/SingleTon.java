@@ -5,10 +5,14 @@ package interviewquestion.buildpattern;
  */
 public class SingleTon {
 
+    public static SingleTon singleTonInstance;
+
     private SingleTon(){}
 
     public SingleTon getSingleTon(){
-        return new SingleTon();
+        // Eagar Loading SingleTon class    
+        singleTonInstance =  new SingleTon();
+        return singleTonInstance;
     }
 
 }
