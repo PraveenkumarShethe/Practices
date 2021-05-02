@@ -19,6 +19,7 @@ public class Example1 {
         treeMap.put(5 , "Hi Mustpa");
         treeMap.put(6 , "Hello Dude");
         treeMap.put(7 , "Hi Dude");
+        treeMap.put(null, null);
 
         System.out.println(treeMap);
     }
